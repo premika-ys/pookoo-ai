@@ -1,0 +1,30 @@
+# Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# Environment variables
+.env
+frontend/.env
+backend/.env
+
+# Node modules
+frontend/node_modules/
+
+# Build folders
+frontend/dist/
+frontend/build/
+
+# Uploads
+backend/uploads/
+
+# Vector stores
+backend/vectorstore/
+
+# Database cache
+*.db-shm
+*.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
