@@ -136,3 +136,117 @@ const openSettings = () => {
   );
 }
 
+// import React, {
+//   createContext,
+//   useState,
+//   useEffect,
+// } from 'react'
+
+// import api from '../services/api'
+
+// export const ChatContext = createContext()
+
+// export function ChatProvider({ children }) {
+
+//   const [messages, setMessages] = useState([])
+//   const [loading, setLoading] = useState(false)
+
+//   const [currentSession, setCurrentSession] =
+//     useState(null)
+
+//   // CREATE SESSION
+//   useEffect(() => {
+
+//     createNewSession()
+
+//   }, [])
+
+//   // NEW SESSION
+//   const createNewSession = async () => {
+
+//     try {
+
+//       const res = await api.get('/create-session')
+
+//       setCurrentSession({
+//         id: res.data.session_id,
+//         title: 'New Chat',
+//       })
+
+//     } catch (err) {
+
+//       console.error(err)
+
+//     }
+//   }
+
+//   // SEND MESSAGE
+//   const sendMessage = async (question) => {
+
+//     if (!question.trim()) return
+
+//     // USER MESSAGE
+//     const userMessage = {
+//       role: 'user',
+//       content: question,
+//     }
+
+//     setMessages(prev => [...prev, userMessage])
+
+//     try {
+
+//       setLoading(true)
+
+//       const res = await api.post('/chat', {
+
+//         session_id: currentSession.id,
+
+//         question: question,
+
+//       })
+
+//       // AI MESSAGE
+//       const aiMessage = {
+//         role: 'assistant',
+//         content: res.data.answer,
+//       }
+
+//       setMessages(prev => [...prev, aiMessage])
+
+//     } catch (err) {
+
+//       console.error(err)
+
+//       setMessages(prev => [
+//         ...prev,
+//         {
+//           role: 'assistant',
+//           content:
+//             'Sorry, I encountered an error. Please try again.',
+//         },
+//       ])
+
+//     } finally {
+
+//       setLoading(false)
+
+//     }
+//   }
+
+//   return (
+
+//     <ChatContext.Provider
+//       value={{
+//         messages,
+//         loading,
+//         sendMessage,
+//         currentSession,
+//         createNewSession,
+//       }}
+//     >
+
+//       {children}
+
+//     </ChatContext.Provider>
+//   )
+// }
