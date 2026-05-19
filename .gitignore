@@ -21,6 +21,12 @@ backend/uploads/
 # Vector stores
 backend/vectorstore/
 
+# Database
+backend/chat_memory.db
+
+# PDFs/Data
+backend/data/
+
 # Database cache
 *.db-shm
 *.db-wal
