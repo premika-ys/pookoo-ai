@@ -11,7 +11,8 @@ The existing load_pdfs function is untouched so nothing else breaks.
 import os
 
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.schema import Document
+# from langchain.schema import Document
+from langchain_core.documents import Document
 
 try:
     from unstructured.partition.pdf import partition_pdf
