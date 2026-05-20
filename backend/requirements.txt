@@ -10,3 +10,4 @@ sentence-transformers
 python-dotenv
 openai
 tiktoken
+langchain-groq
