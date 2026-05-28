@@ -3,7 +3,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://pookoo-ai-production.up.railway.app',
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 300000,
   headers: {
     'Content-Type': 'application/json',
